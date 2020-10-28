@@ -2,7 +2,7 @@ import React ,{useState }from 'react';
 import './App.css';
 import {About} from './component/About/About'
 import {UserProfile} from './component/UserProfile/UserProfile'
-import RenderUsers from './component/RenderUsers';
+import RenderUsers from './component/RenderUser/RenderUsers';
 import {UserContext} from './component/UserContext';
 import Footer from './component/Footer/Footer';
 import {
