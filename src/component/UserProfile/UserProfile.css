@@ -2,7 +2,19 @@
       position: relative;
       border-radius: 50%;
       width: 90%;
+      animation-name: profile-img;
+      animation-duration: 4s;
+      animation-delay: -2s;
 }
+
+@keyframes profile-img {
+      0%   {transform: rotate(45deg);}
+      25%  {transform: rotate(900deg);}
+      50%  {transform: rotate(180deg);}
+      75%  {transform: rotate(270deg);}
+      100% {transform: rotate(360deg);}
+     
+    }
 body{
       background-color:ghostwhite;
 }
