@@ -1,0 +1,12 @@
+.about-block{
+    width: 60%;
+    margin : auto;
+    min-height: 80vh;
+    height: fit-content;
+}
+.about-section{
+    margin-top: 50px;
+}
+.random-img{
+    margin-top: 50px;
+}
