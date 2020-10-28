@@ -1,0 +1,7 @@
+.users-names-block{
+    position: relative;
+    min-height:60vh;
+}
+.no-users{
+    color: brown;
+}

@@ -1,6 +1,7 @@
 import React , {useState , useEffect, useContext} from 'react';
-import {UserContext } from './UserContext';
+import {UserContext } from '../UserContext';
 import { Link } from 'react-router-dom';
+import './RenderUser.style.css'
 
 export default function RenderUsers(){
     const {user} = useContext(UserContext);
@@ -25,21 +26,24 @@ export default function RenderUsers(){
       .catch(error => console.log ('render error :', error))    
     },[user]);
     if (!user){
-     return 'No users'
+     return (
+        <div className="users-names-block">
+          <h4 className="no-users">'No users'</h4>
+        </div>)
     }
 
     if (error){
     return (
-      <>
-       <p>{`Erorr  : ${error} `}</p>
-      </> 
+      <div className="users-names-block">
+        <p>{`Erorr  : ${error} `}</p>
+      </div> 
     );
     }
     if(usersList && usersList.length === 0){
       return 'Loding...'
     }
     return(
-        <div>
+        <div className="users-names-block">
             {usersList.map((userObj,key)=>{
                 if( userObj.login.substring(0,user.length) === user ){
                     return (
@@ -50,4 +54,3 @@ export default function RenderUsers(){
         </div>
     )
 }
-//
