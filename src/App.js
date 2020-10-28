@@ -1,9 +1,10 @@
 import React ,{useState }from 'react';
 import './App.css';
-import {About} from './component/About'
-import {UserProfile} from './component/UserProfile'
+import {About} from './component/About/About'
+import {UserProfile} from './component/UserProfile/UserProfile'
 import RenderUsers from './component/RenderUsers';
 import {UserContext} from './component/UserContext';
+import Footer from './component/Footer/Footer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -47,10 +48,11 @@ function App() {
                 <form >
                    <input type="text" value = {user} onChange = {(e)=>setUser(e.target.value)} />
                 </form>
-                </div>                
-              <RenderUsers />      
+              </div>                
+              <RenderUsers />  
             </Route>
           </Switch>
+          <Footer/>    
         </div>
         </UserContext.Provider >
       </Router>
