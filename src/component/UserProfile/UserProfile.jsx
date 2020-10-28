@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
-import '../UserProfile.css';
-import {Repo} from './RepoFetch';
+import '././UserProfile.css';
+import {Repo} from '../RepoFetch';
 
 export function UserProfile (){
     const {userLogin} = useParams();
